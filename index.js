@@ -166,6 +166,10 @@ switch(day){
 
 ageNew>=18?console.log("age is valid to drink 🍻"):console.log('drink soda 🥤');
 
+//using strict mode---
+
+
+
 
 
 
