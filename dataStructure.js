@@ -28,6 +28,10 @@ const restaurant={
     orderDelivery:function({starterIndex=1,mainIndex=0,time='20:00',address})
     {
         console.log(`Order received ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} by ${time}`);
+    },
+    orderPasta:function(ing1,ing2,ing3){
+        console.log(`Here is your pasta with ${ing1} , ${ing2} and ${ing3}`);
+
     }
 }
 
@@ -103,3 +107,32 @@ restaurant.orderDelivery({
     address:'Val del 22 3',
     mainIndex:2,
 })
+
+//Spread operator.. it is ES6 feature.
+//Spread operator is used to unpack an array..
+
+const num=[7,8,9];
+
+const newArr=[1,2,...num];
+console.log(newArr);
+//shallow copy of array using spread operator..
+const mainMenuCopy=[...restaurant.mainMenu]
+console.log(mainMenuCopy);
+mainMenuCopy[2]='X';
+console.log(restaurant.mainMenu);
+//join two array..
+const menuMerge=[...restaurant.starterMenu,...restaurant.mainMenu];
+console.log(menuMerge);
+
+//Iterables: arrays,strings,maps,sets but not objects
+//spread operator works on all iterables.
+const str='King';
+console.log([...str,'a']);
+// const ingredients=[prompt('Let\'s make pasta ingredient1?'),prompt('Let\'s make pasta ingredient2?'),prompt('Let\'s make pasta ingredient3?')]
+// console.log(ingredients);
+// restaurant.orderPasta(...ingredients);
+
+
+//we can use spread operator make copy of objects also...
+const newRestaurant={...restaurant,founder:'king'};
+console.log(newRestaurant);
