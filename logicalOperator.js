@@ -13,3 +13,8 @@ console.log('----------------And----------------');
 console.log(0 && 'Jonas');//0
 console.log(3 && 'Jonas');//Jonas
 console.log('Hello' && 23 && null && 'Jonas');//null
+
+//*****Nullish Coalescing Operator (??).
+let guestsVar; //nullish values are null and undefined only. Not 0, ''
+const res=guestsVar ?? "No guest found";
+console.log(res);
