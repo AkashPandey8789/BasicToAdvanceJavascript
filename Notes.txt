@@ -1,0 +1,87 @@
+How javascript works?
+Definition of Javascript...
+-->High Level,
+-->Garbage collected
+-->Inerpreted or just in time compiled
+-->Multi-paradigm -- can help implement object oriented or procedural or functional programming..
+-->Prototype-based object-oriented
+-->First-class functions -- functions are same as variables
+-->Dynamic -- no need to sepecify types of variables.
+-->Single threaded-- Js runs in one single thread only.
+-->Non-blocking event loop -- how js handles multiple tasks. by using event loop it takes long running       tasks completes them and puts them back into the main thread.
+
+***Javascript engine 
+it executes js code..Every browser has it's own engine, V8 is the most popular one holded by chome.
+Every engine has two parts -->Call stack -- here the code is executed with the help of execution context.
+-->Heap--it is other part of the engine it is where objects are stored..
+
+compilaion -- converting entire code to machine code and making portable running program..
+Interpretation -- runs through the source code and executes line by line.. it makes these programs slow..
+**Javascript uses JIT(Just In Time) compiler, the whole code gets compiled and executed instead to keeping the compiled code to use it later.
+
+1.Parse the code- read the code(AST).
+2.Compilation-JIT
+3.Execution- happens in call stack.
+4.Optimization
+
+2->3->4->2  -- loop for js execution to make it quick..
+
+-->global execution context created(for top level code) like variables declartion , function signature..
+    Execution context is a environment where all js details stored for executed.
+-->exeution of top -level code happens..
+-->execution of functions and waiting for callbacks..
+   every function is executed in  a new execution context.
+
+Q. What is inside Execution Context?
+-- > Variable Environment-> all variables declartion and functions signature are stored, argument object -- it contains all the argument passed to the method current execution context belongs to .
+
+-->Scope chain -- keeps track of variables/functions created outside to refer them in the current execution.
+this keyword
+
+-->All the above things get created during creation phase. 
+Note:- Arrow function's execution context doesn't contain arguments objects and this keyword.They can use the this keyword from their closest method or parent..
+
+
+**call stack --> keeps track of all the execution contexts. 
+
+*****Scoping
+How our program's variables are organized and accessed is what Scoping means.
+
+Lexical Scoping :- Scoping is controlled by placement of functin and blocks in code.
+
+Scope: - Scope in which certain variable is declared.
+
+Scope of a variable:- Region of our code where a certain variable can be accessed.
+
+Three different types of scopes--
+**Global Scope--
+   Outisde of any function or block
+**Function scope--
+    Variables are accessible only inside functions not outside.
+**Block Scope(ES6)--
+    From ES6 onwards blocks can also create scope. 
+    Variables are only accessible inside block.
+    This is only applies to let and const.
+    Functions are also block scoped(only in strict mode).
+
+***Scope Chain---
+    Every scope can access variables from parent scope... if one scope is not able to find a variable then it will do variable lookup in other above scopes. It cannot look down, not in child scopes. 
+
+Note: -`let` and `const` are block scoped . Whereas `var` is function scoped..
+
+
+Hoisting- Making some types of variables accessible in code before they are  actually decalred.
+
+before code execution code is scanned for variable declarations and each variable will have a new property created in the variable environment object.
+
+function declarations - Hoisted
+var variables - Hoisted  // here we will get undefined 
+let and const Variables - Not Hoisted , TDZ(Temporal dead zone) means we cannot access these variables before declarations.
+function expressionos and arrows - depends on using var,let or const.
+
+arrow function doesn't have this keyword. It will use the parent this keyword.We should not use arrow function as method.
+inside a regular function call , this keyword will be undefined.
+
+
+/**************** Primitive vs Objects Reference type..
+Object types are mainly stored in heap .
