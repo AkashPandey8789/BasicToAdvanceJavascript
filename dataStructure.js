@@ -136,3 +136,23 @@ console.log([...str,'a']);
 //we can use spread operator make copy of objects also...
 const newRestaurant={...restaurant,founder:'king'};
 console.log(newRestaurant);
+
+
+//Rest pattern , when we use ... on left side.
+const[r,s,...others]=[1,2,3,4,5,6];
+console.log(r,s,others); //rest creates as a new array
+
+const{sat , ...weekDays}=restaurant.openingHours;
+console.log(sat,weekDays);
+
+//rest parameters..
+const add=function(...nums){
+    console.log(nums);
+    let sum=0;
+    nums.forEach(i=>{sum=i+sum})
+    console.log(`sum ${sum}`);
+}
+add(2,3);
+add(5,74754,74,6745,7457,56,47);
+const Array=[1,32,5,6,7,54];
+add(...Array); //first spread will give each num and then rest will make it array.
