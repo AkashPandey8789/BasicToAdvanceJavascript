@@ -1,15 +1,19 @@
 'use strict';
 //Destructuring Arrays....
+
+//we can compute property names for the objects
+const weekDaysProp=['thu','fri'];
+const weekend=['sat','sun'];
 const openingHoursObj={
-        thu:{
+        [weekDaysProp[0]]:{
             open:12,
             close:22,
         },
-        fri:{
+        [weekDaysProp[1]]:{
             open:11,
             close:23
         },
-        sat:{
+        [weekend[0]]:{   //here we need to put the property in [] otherwise it will throw error
             open:0,
             close:24
         }
