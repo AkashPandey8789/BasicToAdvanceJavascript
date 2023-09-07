@@ -1,12 +1,6 @@
 'use strict';
 //Destructuring Arrays....
-const restaurant={
-    name:'Classico Italiano',
-    location:'Via Angelo Tavanti 23,Firenze Italy',
-    categories:['Italian','Pizzeria','Vegetaian','Organic'],
-    starterMenu:['Focaccia','Bruschetta','Garlic Bread'],
-    mainMenu:['Pizza','Pasta','Risotto'],
-    openingHours:{
+const openingHoursObj={
         thu:{
             open:12,
             close:22,
@@ -19,7 +13,14 @@ const restaurant={
             open:0,
             close:24
         }
-    },
+    };
+const restaurant={
+    name:'Classico Italiano',
+    location:'Via Angelo Tavanti 23,Firenze Italy',
+    categories:['Italian','Pizzeria','Vegetaian','Organic'],
+    starterMenu:['Focaccia','Bruschetta','Garlic Bread'],
+    mainMenu:['Pizza','Pasta','Risotto'],
+    openingHours:openingHoursObj,
     order:function(starter,mainCourse)
     {
         return [this.starterMenu[starter],this.mainMenu[mainCourse]];
@@ -166,3 +167,26 @@ for(const item of menuArray)console.log(item);
 for(const item of menuArray.entries()){
     console.log(item);
 }
+
+//Enhanched Object literals-------
+
+//Three ways to write object literals
+//in ES6 we don't need to write both same property name in object and value..
+const address={
+    streetName:'16 Tower',
+    houseNo:12,
+    city:'TM'
+}
+const personDetails={
+    firstName:'Sam',
+    lastName:'King',
+    age:31,
+    address, //just writting address will work , we don't need to write address:address...(ES6 feature)
+
+    //below is the way of writting methods in ES6... We can omit function keyword from the function expression and directly we can write like below...
+    printDetails(){
+        console.log(` Full name : ${this.firstName} ${this.lastName} , age : ${this.age} lives at ${address.city}`);
+    }
+}
+console.log(personDetails);
+personDetails.printDetails();
