@@ -18,3 +18,19 @@ console.log('Hello' && 23 && null && 'Jonas');//null
 let guestsVar; //nullish values are null and undefined only. Not 0, ''
 const res=guestsVar ?? "No guest found";
 console.log(res);
+
+
+//Logical assignment operator
+//|| assignment - if the variable is falsy it will assign the value;
+let numGuest;
+numGuest||=10;
+console.log(numGuest);
+
+//nullish assignment operator--if the current value is nullish then it will assign the value...
+let numGuest1;
+numGuest1??=20;
+console.log(numGuest1);
+// && assignment operator-it will assign the value only when the current value is truthy..
+let numGuest2;
+numGuest2 &&=10;
+console.log(numGuest2);//since numGuest2 was undefined so it will not be assigned 10.
