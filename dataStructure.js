@@ -156,3 +156,13 @@ add(2,3);
 add(5,74754,74,6745,7457,56,47);
 const Array=[1,32,5,6,7,54];
 add(...Array); //first spread will give each num and then rest will make it array.
+
+//looping in array-----
+const menuArray=[...restaurant.starterMenu,...restaurant.mainMenu];
+
+for(const item of menuArray)console.log(item);
+
+//to get the index also using for of loop---
+for(const item of menuArray.entries()){
+    console.log(item);
+}
