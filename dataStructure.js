@@ -194,3 +194,16 @@ const personDetails={
 }
 console.log(personDetails);
 personDetails.printDetails();
+
+//Optional Chaining....(?.)
+//if certain property doesn't exist it will return undefined... we will not get error
+console.log(restaurant?.openingHours?.mon?.open);
+//real life example for optional chaining...
+const days=['mon','tue','wed','thu','fri','sat','sun'];
+for(const day of days){
+    const open=restaurant.openingHours[day]?.open ?? 'closed';
+    console.log(`On ${day} restaurant is ${open}`);
+}
+//optional chaining will mostly be used with nullish operator...
+const user=[];
+console.log(user[0]?.name ?? 'array is empty');
