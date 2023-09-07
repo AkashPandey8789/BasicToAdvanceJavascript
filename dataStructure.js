@@ -207,3 +207,16 @@ for(const day of days){
 //optional chaining will mostly be used with nullish operator...
 const user=[];
 console.log(user[0]?.name ?? 'array is empty');
+
+
+//Looping over objects...
+for(const days of Object.keys(openingHoursObj)){
+    console.log(days);
+}
+for(const openHours of Object.values(openingHoursObj)){
+    console.log(openHours);
+}
+//below we are doing destructuring of value , first array destructuring and then object destructuring...
+for(const [key,{open,close}] of Object.entries(openingHoursObj)){
+    console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
