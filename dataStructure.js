@@ -220,3 +220,29 @@ for(const openHours of Object.values(openingHoursObj)){
 for(const [key,{open,close}] of Object.entries(openingHoursObj)){
     console.log(`On ${key} we open at ${open} and close at ${close}`);
 }
+
+//Sets--
+const ordersSet=new Set([
+    'Pasta',
+    'Pizza',
+    'Pizza',
+    'Pasta',
+    'Rasam'
+]);
+//set will return unique values only...
+console.log(ordersSet);
+console.log(ordersSet.size);
+console.log(ordersSet.has('Pizza'));
+ordersSet.add('Garlic Bread');
+ordersSet.delete('Rasam');
+//there are no indexes in set we cannot retrive elements on the basis of index like we do in array.
+console.log(ordersSet);
+//we can loop through set using  below for of loop 
+for(const order of ordersSet)
+{
+    console.log(order);
+}
+//use case of set is to remove duplicate values...
+ordersSet.clear();//will delete all elements of set..
+//to check how many different letters are there in string..
+console.log(new Set('johfsfnwefnw').size);//we can directly pass string to create Set as we just need to pass any iterables..
