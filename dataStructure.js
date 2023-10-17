@@ -246,3 +246,36 @@ for(const order of ordersSet)
 ordersSet.clear();//will delete all elements of set..
 //to check how many different letters are there in string..
 console.log(new Set('johfsfnwefnw').size);//we can directly pass string to create Set as we just need to pass any iterables..
+
+
+//Maps in javascript...
+//In maps we can store key value pair.. where key and value both can be anything..
+
+const rest=new Map();
+//adding new element to map..
+rest.set('name','Classico Italiano');
+rest.set(1,'Firenze Italy');
+//set method updates the map and also returns the map...
+console.log(rest.set(2,'test item'));
+//since set returns the updated map we can call set again on that , chaining can be done..
+rest.set('categories',['Italian','Pizzeria','Vegetaian','Organic']).set('open',11).set('close',23);
+console.log(rest);
+
+//We can use get to get the value...
+console.log(rest.get('categories'));
+//to check wether map contains certain key..
+console.log(rest.has('categories')); //true
+
+//deleting an item from map..
+rest.delete(2);
+console.log(rest);
+//map also has size keyword
+//rest.clear(); // method to clear whole map ...
+console.log(rest.size);
+
+const aarr=[1,2];
+rest.set(aarr,'Test');
+rest.set(document.querySelector('h1'),'Heading');
+console.log(rest);
+console.log(arr);
+console.log(rest.get(document.querySelector('h1')));
