@@ -309,9 +309,36 @@ for(const [key,value] of question){
     }
 }
 
-const numb=Number(prompt('Enter the correct answer:'));
-console.log(numb);
-(numb===question.get('correct'))?console.log(`${question.get(true)}`):console.log(`${question.get(false)}`);
+// const numb=Number(prompt('Enter the correct answer:'));
+// console.log(numb);
+// (numb===question.get('correct'))?console.log(`${question.get(true)}`):console.log(`${question.get(false)}`);
 
 //converting map to array...
 console.log(...question);
+
+//Other built in data structures
+//1.Weak Map  , 2. Weak Set
+
+
+//--------------Strings in Javascript---------
+const airline='TAP Air Portugal';
+const plane='A320';
+
+console.log(plane[0]);
+console.log(plane[1]);
+console.log(plane[2]);
+console.log(plane[3]);
+
+console.log('B12E'[0]);
+console.log(plane.length);
+console.log(`first index of r ${airline.indexOf('r')}`);
+console.log(`last index of r ${airline.lastIndexOf('r')}`);
+
+console.log(airline.indexOf('Portugal'));
+
+console.log(airline.slice(4));
+console.log(airline.slice(4,7));
+console.log(airline.slice(0,airline.indexOf(' ')));
+console.log(airline.slice(airline.lastIndexOf(' ')+1,airline.length))
+
+console.log(airline.slice(1,-1))
