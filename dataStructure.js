@@ -279,3 +279,39 @@ rest.set(document.querySelector('h1'),'Heading');
 console.log(rest);
 console.log(arr);
 console.log(rest.get(document.querySelector('h1')));
+
+//--------------------Maps Iteration---------------
+
+//below is another way to populate map...
+//we can just pass multi array and it will work...
+const question=new Map([
+    ['question','What is the best programming language in the world?'],
+    [1,'C'],
+    [2,'Java'],
+    [3,'Javascript'],
+    ['correct',3],
+    [true,'Correct 🎉'],
+    [false,'Wrong ❌']
+]);
+
+//convert object to maps..
+console.log(openingHours)
+console.log(Object.entries(openingHours));
+
+const openingHoursMap=new Map(Object.entries(openingHours));
+console.log(openingHoursMap);
+
+console.log(`Q: ${question.get('question')}`);
+for(const [key,value] of question){
+    if(typeof key ==='number')
+    {
+        console.log(`Answer ${key}:${value}`);
+    }
+}
+
+const numb=Number(prompt('Enter the correct answer:'));
+console.log(numb);
+(numb===question.get('correct'))?console.log(`${question.get(true)}`):console.log(`${question.get(false)}`);
+
+//converting map to array...
+console.log(...question);
