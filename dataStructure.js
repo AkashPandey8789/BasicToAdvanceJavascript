@@ -389,3 +389,33 @@ const checkBaggage=function(items){
 
 checkBaggage('I have a gun for protection');
 checkBaggage('I have socks and camera.');
+
+//3rd part ---------------------------------------
+//split will store all the elements in array...
+console.log('a+very+nice+string'.split('+'));
+console.log('Jonas Schmedtmann'.split(' '));
+const [firstName,lastName]='Jonas Schmedtmann'.split(' ');
+console.log(firstName,lastName);
+
+//join...
+const newName=['Mr.',firstName,lastName].join(' ');
+console.log(newName);
+
+const tempStr='jessica ann smith davis';
+console.log(tempStr.indexOf(' '));
+
+//padding
+const message='Go to gate 23!';
+console.log(message.padStart(25,'+').padEnd(30,'-'));
+console.log('Jonas'.padStart(10,' '));
+const maskCreditCard=function(number){
+    const str=number+'';
+    const last =str.slice(-4);
+    console.log(str.length);
+    return last.padStart(str.length,'*');
+}
+console.log(maskCreditCard(4349384792394));
+
+//Repeat.................
+const message2='Bad weather... All Departure Delayed... ';
+console.log(message2.repeat(5));
