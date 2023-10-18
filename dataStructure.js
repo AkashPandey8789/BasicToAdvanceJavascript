@@ -342,3 +342,50 @@ console.log(airline.slice(0,airline.indexOf(' ')));
 console.log(airline.slice(airline.lastIndexOf(' ')+1,airline.length))
 
 console.log(airline.slice(1,-1))
+
+//More methods of string...
+console.log(airline.toLowerCase());
+console.log(airline.toUpperCase());
+
+function correctCapitalization(fullName)
+{
+    return fullName[0].toUpperCase()+fullName.slice(1,fullName.indexOf(' ')).toLowerCase()+' '+fullName[fullName.indexOf(' ')+1].toUpperCase()+fullName.slice(fullName.indexOf(' ')+2).toLowerCase();
+}
+
+console.log(correctCapitalization('aKASH pAnDey'));
+
+
+const email=' HelloJonas@mail.io  \n';
+const normalizedEmail=email.trim().toLowerCase();
+console.log(normalizedEmail);
+
+//we also have trimfirst and trimstart
+
+console.log(email.trimStart());
+console.log(email.trimEnd());
+
+//replacing
+const priceGB='Rs288,97';
+let correctPriceFormat=priceGB.replace('Rs','$').replace(',','.');
+console.log(correctPriceFormat);
+//replace creates a new string it doesn't mutate the string...
+const announcement=`All passengers come to boarding door 23, Boarding door 23!`
+//replace only replaces first occurrence...
+console.log(announcement.replace(/door/g,'gate'));
+
+//Booleans returning methods...
+const plane2='A32neo';
+console.log(plane.includes('A320'));
+console.log(plane2.startsWith('Air'));
+
+const checkBaggage=function(items){
+    const baggage=items.toLowerCase();
+    if(baggage.includes('knife') || baggage.includes('gun')){
+        console.log('You are not allowed to board the plane!!❌');
+    }else{
+        console.log('You are allowed to board the plane✅');
+    }
+}
+
+checkBaggage('I have a gun for protection');
+checkBaggage('I have socks and camera.');
