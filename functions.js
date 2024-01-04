@@ -23,7 +23,7 @@ const checkIn=function(flightNum,passenger){
 checkIn(flight,jonas)
 console.log(flight);
 console.log(jonas);//since objects are passed by reference its original value will also change...
-//Note: Javascript doesn't have pass by reference it only has pass by value...
+//Note: Javascript doesn't have pass by reference it only has pass by value , here it passes the memory address as value...
 //when we pass an object we pass it's memory location value and not it acts as reference...
 
 //First-Class functions and Higher Order Functions...
@@ -50,3 +50,16 @@ const counter={
 //function that receives another function...
 //function that returns a new function 
 
+//----------------------Functions accepting callback functions------------------------------
+
+const correctCapitalization=function(str){
+    return str[0].toUpperCase()+str.slice(1,str.indexOf(' '))+' '+str[str.indexOf(' ')+1].toUpperCase()+str[str]
+}
+
+const greeter=function greet(str){
+    return function greetWithName(name){
+        console.log(`${str} ${name}`);
+    }
+}
+
+greeter('Hi')('Ramesh')
