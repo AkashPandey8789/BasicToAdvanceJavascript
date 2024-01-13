@@ -63,3 +63,31 @@ const greeter=function greet(str){
 }
 
 greeter('Hi')('Ramesh')
+
+//**this keyword binding........................ */
+
+const StudentClass={
+    name:'Akash',
+    Roll:32,
+    marks:987,
+    displayReport(){
+        console.log(`${this.name} with roll ${this.Roll} has marks ${this.marks}` );
+    }
+}
+
+const stObj=StudentClass.displayReport; // assigning desplayReport method to constVar...
+StudentClass.displayReport();
+//bellow code doesn't work
+//stObj(); // this will throw error because this is undefined over here....
+
+//to make the method work we need to bind this somehow...
+//function is nothing but an object..
+const objStudent={
+    name:'King',
+    Roll:31,
+    marks:980
+}
+stObj.call(objStudent);
+console.log(stObj.name); //name will give name of function..
+
+
