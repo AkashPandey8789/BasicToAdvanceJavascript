@@ -148,3 +148,31 @@ const taxForMaterial=function taxForGeneralMaterial(rates){
 
 const taxForMaggii=taxForMaterial(0.2);
 console.log(`10 maggi cost ${taxForMaggii(10)} with taxes`);
+
+
+//(IIFE)--> Immediately Invoked Function Expression............
+const runOnce=function(){
+    console.log(`this will never run again`);
+}
+
+runOnce();
+//above scenario can be executed multiple time
+
+//below is a way to create a function which will only be called once and never again... immediately invoked fn exp ...
+//this is not a feature more of a pattern ..
+//since functions provide scopes , so when we create a variable inside function it will not be accessible outside the function with that we can protect the variable... it provides encapsulation for the variable
+(function(){
+    console.log(`this will never run agian`);
+})();
+
+//we can also use arrow functions to achieve the same task...
+(()=>console.log(`this will never run again`))();
+
+//this pattern of creating a scope to keep variables safe is present but now we use let and const to create variables which are alread block scoped... so we don't use this pattern in modern javascript.. but if we need to execute a function once still we can go with IIFE.
+
+
+{
+    const privateVar=10;
+}
+
+//console.log(privateVar); this will throw error ..
