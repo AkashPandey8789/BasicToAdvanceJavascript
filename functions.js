@@ -176,3 +176,21 @@ runOnce();
 }
 
 //console.log(privateVar); this will throw error ..
+
+//***** Closures----------------------------
+//A function has access to the variable environment of execution context in which it was created...
+const secureAddmission=function(){
+    let admissionCount=0;
+    return function(){
+        admissionCount++;
+        console.log(`current admission count is ${admissionCount}`);
+    }
+}
+
+const doAdmission=secureAddmission();
+doAdmission();//current admission count is 1
+doAdmission();//current admission count is 2
+doAdmission();//current admission count is 3
+//since the doAdmission method was created during the execution context of secureAdmissionit will have access to variable environment of secureAddmission.
+//js will look for variable in closures first and then global scope or parent scope..
+console.dir(doAdmission);//using this we can get the function details and we can check for closure , [[]] double bracket means it is an internal property in js and we cannot access it.
