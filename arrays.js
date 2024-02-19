@@ -43,6 +43,28 @@ console.log(ar.at(-1));//[-1] won't work ,for method chaining and calling elemen
 //at works on string also.
 console.log("jonas".at(-1));
 
+//Looping over array using foreach loop..
+
+const movements=[200,450,-400,3000,-650,-130,70,1300];
+for(const mov of movements){
+    if(mov>0){
+        console.log(`You deposited ${mov}`);
+    }
+    else{
+        console.log(`You withdrew ${mov}`);
+    }
+}
+
+console.log('iterating using forEach method---------------------');
+movements.forEach(function(movement,index,arr){ // forEach method passes values, index and the whole array while calling a call back method.
+    if(movement>0){
+        console.log(`You deposited ${movement}`);
+    }
+    else{
+        console.log(`You withdrew ${movement}`);
+    }
+})
+
 
 
 
