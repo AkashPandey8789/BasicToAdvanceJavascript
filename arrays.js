@@ -66,5 +66,26 @@ movements.forEach(function(movement,index,arr){ // forEach method passes values,
 })
 
 
+//forEach with maps and sets....
+
+const currencies=new Map([
+    ['USD','United States Dollar'],
+    ['EUR','Euro'],
+    ['GBP','Pound']
+]);
+
+currencies.forEach(function(value,key,map){
+    console.log(`${key} ${value}`);
+});
+
+//Set
+const uniqueCurrenices=new Set(['USD','GBP','USD','EUR','GBP']);
+console.log(uniqueCurrenices);
+
+uniqueCurrenices.forEach(function(value,key,set){
+    console.log(`${key} ${value} `)
+});
+
+
 
 
