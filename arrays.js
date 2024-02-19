@@ -31,3 +31,18 @@ console.log(letters)
 //--> it joins all the elements of array into string by putting character provided between them.
 console.log(letters.join('-'));
 
+//THE NEW AT METHOD
+//at --> Works like index to get elements present at a location.
+const ar=[23,11,54];
+console.log(ar[0]);
+console.log(ar.at(0));
+
+//at can work with -ve indexes.. 
+console.log(ar.at(-1));//[-1] won't work ,for method chaining and calling elements from back we should use at method. 
+
+//at works on string also.
+console.log("jonas".at(-1));
+
+
+
+
