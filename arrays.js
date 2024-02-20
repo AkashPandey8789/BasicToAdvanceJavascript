@@ -109,4 +109,8 @@ console.log(mapArr.reduce(function(prevValue,curValue){
 }));
 console.log(sum);
 
+//method chaining of map ,filter and reduce...
+
+console.log(mapArr.filter(value=>value%2!=0).map(value=>value*2).reduce((prevValue,curValue)=>prevValue+curValue));
+
 
