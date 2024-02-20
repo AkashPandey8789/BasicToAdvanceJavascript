@@ -87,5 +87,26 @@ uniqueCurrenices.forEach(function(value,key,set){
 });
 
 
+//map method 
+//-->creates a new array based on original array. Map takes an array and takes a callback method for each iteration.
+const mapArr=[1,2,3,4,5];
+console.log(mapArr.map(function(value){
+    return value*2;
+}))
+
+//filter method
+//-->used to filter elements in original array which statisfies a condition and creates a new array of result. 
+console.log(mapArr.filter(function(value){
+    return value%2==0;
+}))
+
+//Reduce method..
+//--> it boils down all array elements to one single value, for example adding all elements together.
+let sum=0;
+console.log(mapArr.reduce(function(prevValue,curValue){
+    sum+=curValue;
+    return sum;
+}));
+console.log(sum);
 
 
