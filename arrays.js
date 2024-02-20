@@ -123,4 +123,9 @@ console.log(mapArr.find(value=>value%2==0));
 
 console.log(mapArr.findIndex(value=>value==2));
 
+//includes method to test whether array contains that value.
+console.log(mapArr.includes(3)); //returns boolean .
+
+
+
 
