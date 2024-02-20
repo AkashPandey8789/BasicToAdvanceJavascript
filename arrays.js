@@ -137,4 +137,10 @@ console.log(mapArr.every(value=>value>0));
 const flatArr=[[1,2,3],[3,5,7,8,9]];
 console.log(flatArr.flat()); // no need for any callback it will flat the array.
 
+const flatArr2=[[1,2,[3,4]],[8.9,56]];
+//flat method takes one argument that is depth till which the array needs to be flattend.
+
+console.log(flatArr2.flat(2));
+console.log(flatArr2.flat(Infinity))//We can pass infnity to flatten the array to the very deep.
+
 
