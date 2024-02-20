@@ -129,6 +129,7 @@ console.log(mapArr.includes(3)); //returns boolean .
 //some method to test something above or below based on condition , it will return boolean.
 console.log(mapArr.some(value=>value>2)); // returns true;
 
-
+//every method tests condition on every element of array and returns true if every element satisfies the condition or false if any element fails the condition.
+console.log(mapArr.every(value=>value>0));
 
 
