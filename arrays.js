@@ -132,4 +132,9 @@ console.log(mapArr.some(value=>value>2)); // returns true;
 //every method tests condition on every element of array and returns true if every element satisfies the condition or false if any element fails the condition.
 console.log(mapArr.every(value=>value>0));
 
+//flat method
+//--> it will flat or pull all the elements from sub array and create a single array with all these elements.
+const flatArr=[[1,2,3],[3,5,7,8,9]];
+console.log(flatArr.flat()); // no need for any callback it will flat the array.
+
 
