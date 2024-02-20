@@ -126,6 +126,9 @@ console.log(mapArr.findIndex(value=>value==2));
 //includes method to test whether array contains that value.
 console.log(mapArr.includes(3)); //returns boolean .
 
+//some method to test something above or below based on condition , it will return boolean.
+console.log(mapArr.some(value=>value>2)); // returns true;
+
 
 
 
