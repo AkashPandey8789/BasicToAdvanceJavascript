@@ -114,3 +114,9 @@ console.log(sum);
 console.log(mapArr.filter(value=>value%2!=0).map(value=>value*2).reduce((prevValue,curValue)=>prevValue+curValue));
 
 
+//find method...
+//-->it loops over an array and finds the first element which satisfies the condition.
+
+console.log(mapArr.find(value=>value%2==0));
+
+
