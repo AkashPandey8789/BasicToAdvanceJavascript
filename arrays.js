@@ -119,4 +119,8 @@ console.log(mapArr.filter(value=>value%2!=0).map(value=>value*2).reduce((prevVal
 
 console.log(mapArr.find(value=>value%2==0));
 
+//findIndex Method..
+
+console.log(mapArr.findIndex(value=>value==2));
+
 
