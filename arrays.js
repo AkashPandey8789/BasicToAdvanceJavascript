@@ -267,3 +267,9 @@ console.log((2.7).toFixed(0));//3
 console.log((2.7).toFixed(2));//2.70
 
 
+//Remainder operator..
+console.log(5%2); //1
+const isEven=x=>x%2==0 ? true : false;
+
+console.log(isEven(23));//false
+console.log(isEven(24));//true
