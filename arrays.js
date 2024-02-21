@@ -187,3 +187,18 @@ console.log(negativeNums.sort((a,b)=>{
 
 }))
 
+//Creating and filling arrays...
+console.log([1,2,3,4,5,6,7]);
+console.log(new Array(1,2,3,4,5,6,7,8,9,10,11));
+console.log(new Array(7)); //it will create empty array with 7 positions.
+
+let x=new Array(7);
+x.fill(99);//fill will put value entered in the whole array...
+console.log(x);
+x.fill(3,2,5); // 2 - is begin index and 5 -  is end index.
+console.log(x);
+
+//Array.from 
+let z=Array.from({length:7},(cur,i) => (i+1));
+console.log(z);
+//Array.from can be used to create arrays while DOM manipulation by reading the node list.
