@@ -202,3 +202,32 @@ console.log(x);
 let z=Array.from({length:7},(cur,i) => (i+1));
 console.log(z);
 //Array.from can be used to create arrays while DOM manipulation by reading the node list.
+
+//Numbers in Javascript...
+// Normally numbers are stored in 64 bit format of double precision floating point numbers.
+
+console.log(23===23.0);
+
+console.log(0.1+0.2==0.3); //issue with javascript it will return false..
+
+console.log(Number('23'));
+
+console.log(Number.parseInt('23px')); // here we will get 23 , it will help get css values with units and then get the numeric values.
+console.log(Number.parseInt('e23')); 
+
+console.log(Number.parseFloat('0.23px'));
+//parseInt , parseFloat are global functions so we can call them without Number object also, but in modern js calling with Number object is prefered.
+
+console.log(Number.isNaN(20));
+console.log(Number.isNaN('20'));
+console.log(Number.isNaN(+'20X'));
+console.log(Number.isNaN(23/0));
+
+//isFinite can be used to check whether value is number or not ...
+console.log(Number.isFinite(20));
+console.log(Number.isFinite('20'));
+console.log(Number.isFinite(20/0));
+
+console.log(Number.isInteger(23));//true
+console.log(Number.isInteger(23.0));//true
+console.log(Number.isInteger('23'));//false
