@@ -273,3 +273,9 @@ const isEven=x=>x%2==0 ? true : false;
 
 console.log(isEven(23));//false
 console.log(isEven(24));//true
+
+//Numeric Separators...
+const diameter=287_496_000_000; //_ is numeric separator to easily understand the bigg number...
+console.log(diameter);
+
+console.log(Number('23_00')) //NaN , _ in string won't be able to parse the number...
