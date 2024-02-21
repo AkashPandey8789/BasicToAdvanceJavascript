@@ -231,3 +231,39 @@ console.log(Number.isFinite(20/0));
 console.log(Number.isInteger(23));//true
 console.log(Number.isInteger(23.0));//true
 console.log(Number.isInteger('23'));//false
+
+//Math and Rounding...
+console.log(Math.sqrt(64));//8
+console.log(36 ** (1/2));//6 sqrt..
+
+console.log(Math.max(2,3,4,7,1,234,4353));//4353
+console.log(Math.max('23',12,4,5,6));//23
+
+//calculating circle area...
+console.log(Math.PI * Number.parseFloat('2px')**2);
+
+//random number...
+console.log(Math.trunc(Math.random()*6)+1); //it will return value between 1 and 6...
+//Math.random --> it will give value between 0 and 1 ..
+//Math.trunc --> will truncate the decimal values and return 
+
+//Math.round --> it will round to nearest number...
+console.log(Math.round(23.9));//24
+console.log(Math.round(23.3));//23
+
+//Math.ceil -->it will round to nearest big number
+console.log(Math.ceil(23.3));//24
+console.log(Math.ceil(23.8));//24
+
+//Math.floor --> returns just smaller value.
+console.log(Math.floor(23.8));//23
+console.log(Math.floor(23.3));//23
+
+//below just smaller value will be -24.
+console.log(Math.floor(-23.3))//-24
+
+//Rounding decimals...
+console.log((2.7).toFixed(0));//3
+console.log((2.7).toFixed(2));//2.70
+
+
