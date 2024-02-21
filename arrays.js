@@ -295,3 +295,27 @@ console.log(typeof 200n); //bigint
 
 //Division
 console.log(10n/3n); //3n  it will cut off the decimal part of the result.
+
+//Dates....
+//Create a date.... there are 4 ways to create dates.
+
+console.log(new Date());
+console.log(new Date('Wed Feb 21 2024 13:10:32'));
+console.log(new Date('December 25 ,2015'));
+
+console.log(new Date(2037,10,19,15,23,5)); 
+//Note - month is 0 based in js , Nov -10th month in js..
+
+
+const future=new Date(2037,10,19,15,23,5);
+
+console.log(future.getFullYear());
+console.log(future.toISOString());
+console.log(future.getMonth());
+console.log(future.getDate());
+console.log(future.getHours());
+console.log(future.getMinutes());
+console.log(future.getSeconds());
+console.log(future.getTime());
+
+console.log(Date.now());
