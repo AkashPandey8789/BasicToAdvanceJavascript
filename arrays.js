@@ -279,3 +279,19 @@ const diameter=287_496_000_000; //_ is numeric separator to easily understand th
 console.log(diameter);
 
 console.log(Number('23_00')) //NaN , _ in string won't be able to parse the number...
+
+//BigInt
+
+console.log(Number.MAX_SAFE_INTEGER); //the biggest number which can be safely stored as integer...
+console.log(444444444444444444444444444444444444444444444444n);
+//by putting n at the end js will store the number as BigInt.
+console.log(BigInt(89472398473928479237498234893784293429384237942394834823493249849348)); //the constructor should be used with smaller numbers it will give wrong output...
+
+//Note : - we cannot mix bigint with normal numbers , we cannot perform operation between bigint number and a normal number.
+
+console.log(typeof 200n); //bigint
+
+//Note :- logical operators and string concatenation operator works with bigint numbers.
+
+//Division
+console.log(10n/3n); //3n  it will cut off the decimal part of the result.
