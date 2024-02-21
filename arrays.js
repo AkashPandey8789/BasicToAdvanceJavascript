@@ -143,4 +143,16 @@ const flatArr2=[[1,2,[3,4]],[8.9,56]];
 console.log(flatArr2.flat(2));
 console.log(flatArr2.flat(Infinity))//We can pass infnity to flatten the array to the very deep.
 
+//flatMap --> below we have array of student object so we can flatten the scores by passing callback using flatMap.
+const studentObj=[{
+    'name':'Max',
+    'scores':[12,54,67,91]
+},
+{
+   'name':'Tod',
+    'scores':[30,85,67,91] 
+}
+]
+console.log(studentObj.flatMap(st=>st.scores));
+
 
