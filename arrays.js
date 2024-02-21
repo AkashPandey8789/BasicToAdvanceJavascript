@@ -155,4 +155,35 @@ const studentObj=[{
 ]
 console.log(studentObj.flatMap(st=>st.scores));
 
+//Sorting arrays...
+const arrStr=['Jonas','Max','Adam','Tod','Martha'];
+console.log(arrStr.sort());//sort method mutates the original array ...Also sort method does sorting based on strings.
+console.log(arrStr);//will get mutated sorted array...
+
+let negativeNums=[-1300,-200,-500,300,200,-100,5000];
+//console.log(negativeNums.sort());
+
+//passing callback in sort to get correct output for negative numbers...
+//below we have descending order sorting..
+console.log(negativeNums.sort((a,b)=>{
+    if(a>b){    //if a > b and we don't want to sort then we can pass -1.
+        return -1;
+    }
+    if(b>a){
+        return 1;
+    }
+
+}))
+console.log(negativeNums);
+
+//ascending order sorting,..
+console.log(negativeNums.sort((a,b)=>{
+    if(a>b){    //if a > b and we want to sort then we can pass 1.
+        return 1;
+    }
+    if(b>a){
+        return -1;
+    }
+
+}))
 
