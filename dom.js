@@ -52,3 +52,12 @@ const liElement=document.createElement('li');
 liElement.innerText='Avatar';
 //adding element ...
 ulElement.append(liElement);
+
+//adding/modifying attribute...
+liElement.setAttribute('id','avatarMovie');
+
+//to get attribute..
+console.log(liElement.getAttribute('id'));
+
+//to remove attribute...
+liElement.removeAttribute('id');
