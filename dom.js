@@ -38,3 +38,17 @@ console.log(spiderMovie);
 spiderMovie.forEach((movie)=>{
     movie.style.fontSize='2rem';
 });
+
+
+//Creating Elements...
+
+const ulElement=document.querySelector('ul');
+const liElement=document.createElement('li');
+
+//adding text , there are three ways to add text..
+//1.innerText --> the safest one.
+//2.innerHtml --> it will show the inner Html also.
+//3.textContent --> it shows the way text written in html, with indentation.
+liElement.innerText='Avatar';
+//adding element ...
+ulElement.append(liElement);
