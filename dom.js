@@ -71,3 +71,36 @@ liElement.classList.remove('list-item');
 
 //to remove an element we should have that element in some variable and then we can remove it...
 liElement.remove(); // this will remove liElement from DOM.
+
+//DOM Traversal...
+
+//Parent Node Traversal
+
+let ul=document.querySelector('ul');
+console.log(ul);
+console.log(`to get parent`,ul.parentNode);
+console.log(`to get parent`,ul.parentElement);
+
+console.log(`to get grand parent`,ul.parentNode.parentNode);
+console.log(`to get grand parent`,ul.parentElement.parentElement);
+
+const html=document.documentElement; // gives reference to html element..
+console.log(html.parentNode);//it returns any kind of node..
+console.log(html.parentElement) // it returns elements if it exists eles returns null.
+//Child Node Traversal
+
+console.log(ul.childNodes); // nodes are text indentations also , so all are counted..
+console.log(ul.firstChild);
+console.log(ul.lastChild);
+
+//to select elements..
+console.log(ul.children);
+console.log(ul.firstElementChild);
+console.log(ul.lastElementChild);
+
+//Sibling Node Traversal
+const h3Element=document.querySelector('h3');
+console.log(h3Element);
+
+console.log(h3Element.previousElementSibling);
+console.log(h3Element.nextElementSibling);
