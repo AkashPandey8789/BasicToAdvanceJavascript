@@ -319,3 +319,36 @@ console.log(future.getSeconds());
 console.log(future.getTime());
 
 console.log(Date.now());
+
+//to read from javascript.info
+//Numbers
+//Operations with dates...
+//Timers
+
+//to write numbers with so many zeros we can do it like below...
+console.log(1e9);//1 and then will have 9 zeros..
+//to write numbers with so many decimal points zeros...
+console.log(1e-5);//0.00001 
+
+//toString(base) --> it will return the number in that base numeric value..
+let num=255;
+console.log(num.toString(2));
+console.log(num.toString(16));
+console.log(num.toString(10));
+//if we want to call the method directly on number then we need to place .. (two dots) and then call the method..
+console.log(123..toString(2));
+
+//to call a code snippet/function after certain interval...
+function myFunc(a,b){
+    console.log(a);
+    console.log(b);
+}
+//below we are setting the interval to call myFuncInterval method..
+// const myFuncInterval=setInterval(myFunc,500,34,23);
+// myFuncInterval;
+
+//setTimeout will run the code after a certain time is passed. 
+//code should be written as function (callback function)
+setTimeout(()=>console.log('Running with setTimout!!'),5000)
+
+
