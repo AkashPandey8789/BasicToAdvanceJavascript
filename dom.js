@@ -29,3 +29,12 @@ console.log(firstLiElement);
 
 const allLiElements=document.querySelectorAll('li');
 console.log(allLiElements);
+
+
+//styling elements..
+title.style.color='Yellow';
+const spiderMovie=document.querySelectorAll('#spider');
+console.log(spiderMovie);
+spiderMovie.forEach((movie)=>{
+    movie.style.fontSize='2rem';
+});
