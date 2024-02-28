@@ -61,3 +61,10 @@ console.log(liElement.getAttribute('id'));
 
 //to remove attribute...
 liElement.removeAttribute('id');
+
+
+//classes adding and removing...
+
+liElement.classList.add('list-item');
+console.log(liElement.classList.contains('list-item'));
+liElement.classList.remove('list-item');
