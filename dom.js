@@ -104,3 +104,25 @@ console.log(h3Element);
 
 console.log(h3Element.previousElementSibling);
 console.log(h3Element.nextElementSibling);
+
+
+//Event Listeners..
+const enterBtn=document.querySelector('button');
+function alertFunc(){
+    alert('I love Javascript!!');
+}
+enterBtn.addEventListener('click',alertFunc);
+
+const revealBtn=document.querySelector('#btn-reveal');
+
+const hiddenContent=document.querySelector('.hidden-content');
+
+function hideContent(){
+    if(hiddenContent.classList.contains('button-reveal')){
+        hiddenContent.classList.remove('button-reveal');
+    }else{
+        hiddenContent.classList.add('button-reveal');
+    }
+}
+
+revealBtn.addEventListener('click',hideContent);
