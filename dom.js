@@ -68,3 +68,6 @@ liElement.removeAttribute('id');
 liElement.classList.add('list-item');
 console.log(liElement.classList.contains('list-item'));
 liElement.classList.remove('list-item');
+
+//to remove an element we should have that element in some variable and then we can remove it...
+liElement.remove(); // this will remove liElement from DOM.
